@@ -1,0 +1,5 @@
+﻿  MacroCommand.cpp
+  InputHandlercpp.cpp
+  Generating Code...
+c:\users\jocon\desktop\game engineering\commandpattern\inputhandlercpp.cpp(6): error C4700: uninitialized local variable 'event' used
+c:\users\jocon\desktop\game engineering\commandpattern\macrocommand.cpp(8): error C4700: uninitialized local variable 'c' used

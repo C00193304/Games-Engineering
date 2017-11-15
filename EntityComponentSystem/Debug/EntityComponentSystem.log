@@ -1,0 +1,10 @@
+﻿  Player.cpp
+  PhysicsComponent.cpp
+  InputComponent.cpp
+  GraphicsComponent.cpp
+  Dog.cpp
+  Cat.cpp
+  Alien.cpp
+  AIComponent.cpp
+  Generating Code...
+LINK : fatal error LNK1561: entry point must be defined
