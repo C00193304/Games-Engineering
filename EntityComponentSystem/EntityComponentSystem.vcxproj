@@ -75,7 +75,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\jocon\Desktop\GameEngineering\Games-Engineering\EntityComponentSystem\ExternalLibraries\SDL2-2.0.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\jocon\Desktop\GameEngineering\Games-Engineering\EntityComponentSystem\ExternalLibraries\SDL2-2.0.7\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -117,29 +122,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AISystems.h" />
-    <ClInclude Include="Alien.h" />
-    <ClInclude Include="Cat.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Control.h" />
-    <ClInclude Include="Dog.h" />
+    <ClInclude Include="ControlSystem.h" />
+    <ClInclude Include="Entity.h" />
     <ClInclude Include="GraphicsSystem.h" />
     <ClInclude Include="Health.h" />
     <ClInclude Include="PhysicsSystem.h" />
-    <ClInclude Include="Player.h" />
     <ClInclude Include="Position.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AISystems.cpp" />
-    <ClCompile Include="Alien.cpp" />
-    <ClCompile Include="Cat.cpp" />
-    <ClCompile Include="Control.cpp" />
-    <ClCompile Include="Dog.cpp" />
+    <ClCompile Include="ControlSystem.cpp" />
     <ClCompile Include="GraphicsSystem.cpp" />
-    <ClCompile Include="Health.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PhysicsSystem.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Position.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
