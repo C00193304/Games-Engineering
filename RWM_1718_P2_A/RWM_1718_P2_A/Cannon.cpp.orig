@@ -1,0 +1,129 @@
+#include "Cannon.h"
+
+Cannon::Cannon(b2World * world)
+{
+	type = "Cannon";
+
+	// Define Cannon's position, width and height
+	CannonRect = Rect(50.0f, 50.0f, 50.0f, 15.0f);
+
+	// Create Body definition
+	b2BodyDef bodyDef;
+	bodyDef.type = b2_dynamicBody;
+	bodyDef.position.Set(CannonRect.pos.x, CannonRect.pos.y);
+	CannonBody = world->CreateBody(&bodyDef);
+
+	// Creat Shape polygon
+	b2PolygonShape Shape;
+	Shape.SetAsBox(25.0f, 7.5f);
+	CannonBody->CreateFixture(&Shape, 0.0f);
+	angle = CannonBody->GetAngle();
+}
+
+Cannon::Cannon(b2World * world, Renderer & renderer)
+{
+	type = "Cannon";
+
+	// Define Cannon's position, width and height
+<<<<<<< HEAD
+	CannonRect = Rect(50.0f, 50.0f, 75.0f, 20.0f);
+=======
+	CannonRect = Rect(50.0f, 50.0f, 50.0f, 15.0f);
+>>>>>>> f5be3ca0d332e4ab1def931ba54e3d2d0f0a0b38
+
+	// Create Body definition
+	b2BodyDef bodyDef;
+	bodyDef.type = b2_dynamicBody;
+	bodyDef.position.Set(CannonRect.pos.x, CannonRect.pos.y);
+	CannonBody = world->CreateBody(&bodyDef);
+
+	// Creat Shape polygon
+	b2PolygonShape Shape;
+	Shape.SetAsBox(37.5f, 10.0f, b2Vec2(37.5f, 10.0f), 0);
+	CannonBody->CreateFixture(&Shape, 0.0f);
+
+	CannonSprite.Init("Assets/Images/Cannon.png", renderer, Rect(0,0,274,128), CannonRect);
+}
+
+void Cannon::Render(Renderer& r)
+{
+	//r.drawRect(CannonRect, CannonColour);
+	CannonSprite.Render(r, angle + 270);
+}
+
+void Cannon::Update(unsigned int DeltaTime)
+{
+	GetBodyPosition();
+	Rotation();
+}
+
+void Cannon::GetBodyPosition()
+{
+	CannonRect.pos.x = CannonBody->GetPosition().x;
+	CannonRect.pos.y = CannonBody->GetPosition().y;
+<<<<<<< HEAD
+	//CannonBody->ApplyForce(b2Vec2(0, -10.0f), CannonBody->GetPosition(), true); // prevents gravity from taking effect
+=======
+	CannonBody->ApplyForce(b2Vec2(0, -10.0f), CannonBody->GetPosition(), true); // prevents gravity from taking effect
+>>>>>>> f5be3ca0d332e4ab1def931ba54e3d2d0f0a0b38
+	CannonSprite.setPosition(CannonRect.pos);
+}
+
+void Cannon::RotateLeft()
+{
+	std::cout << angle << std::endl;
+	if (angle <= 0)
+	{
+		angle = 1;
+	}
+	else
+	{
+		angle -= 1;
+	}
+	
+}
+
+void Cannon::RotateRight()
+{
+	if (angle >= 90)
+	{
+		angle = 89;
+	}
+	else
+	{
+		angle += 1;
+	}
+	std::cout << angle << std::endl;
+}
+
+void Cannon::IncreasePower()
+{
+	if (power >= 100)
+	{
+		power = 100;
+	}
+	else
+	{
+		power += 1;
+	}
+	std::cout << power << std::endl;
+}
+
+void Cannon::DecreasePower()
+{
+	if (power <= 0)
+	{
+		power = 0;
+	}
+	else
+	{
+		power -= 1;
+	}
+	std::cout << power << std::endl;
+
+}
+
+void Cannon::Rotation()
+{
+
+}

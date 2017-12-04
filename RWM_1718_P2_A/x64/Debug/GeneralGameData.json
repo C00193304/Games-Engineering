@@ -1,0 +1,37 @@
+{
+ "general_game_data": {
+        "global_settings" : {
+          "font_file": ".\\assets\\BRITANIC.TTF",
+            "sfx": 
+            {
+                
+            }                        
+      },
+  "main_menu_items": {
+    "menu_items": [
+      {
+        "size": 40,
+        "text": "Play",
+        "x": 700,
+        "y": 300,
+        "Width": 100,
+        "Height":  50
+      }
+    ]
+  },
+  "level1": {
+    "max_game_objects": 30,
+    "player_x": 500,
+    "player_y": 750,
+    "GameObjects": [
+      {
+        "x": 50,
+        "y": 770,
+        "Width": 50,
+        "Height":  50,
+        "Type": "Checkpoint"
+      }
+          ]
+        }
+    } 
+}

@@ -1,0 +1,5 @@
+﻿  Main.cpp
+  GraphicsSystem.cpp
+  Generating Code...
+     Creating library C:\Users\jocon\Desktop\Games-Engineering\ECM\Debug\ECM.lib and object C:\Users\jocon\Desktop\Games-Engineering\ECM\Debug\ECM.exp
+LINK : fatal error LNK1561: entry point must be defined

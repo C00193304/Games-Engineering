@@ -1,0 +1,154 @@
+﻿  World.cpp
+  Windmill.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\windmill.cpp(29): warning C4305: 'argument': truncation from 'double' to 'float32'
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\windmill.cpp(42): warning C4305: '=': truncation from 'double' to 'float32'
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\windmill.cpp(59): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Wall.cpp
+  UIText.cpp
+  stdafx.cpp
+  StartScene.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\startscene.cpp(33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Sprite.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(15): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(16): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(18): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(32): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(39): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(56): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(62): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(63): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(68): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(69): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(75): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(76): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(81): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(82): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(87): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(88): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(94): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(95): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(100): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(101): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(106): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\sprite.cpp(107): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Goal.cpp
+  Sounds.cpp
+  SceneManager.cpp
+  Rocket.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\rocket.cpp(43): warning C4244: 'argument': conversion from 'double' to 'float32', possible loss of data
+  Renderer.cpp
+  Particles.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\particles.cpp(26): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\particles.cpp(36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\particles.cpp(37): warning C4244: 'argument': conversion from 'int' to 'float32', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\particles.cpp(44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\particles.cpp(59): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\particles.cpp(69): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\particles.cpp(70): warning C4244: 'argument': conversion from 'int' to 'float32', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\particles.cpp(77): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Platform.cpp
+  Mixer.cpp
+  main.cpp
+  LTimer.cpp
+  LevelLoader.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\levelloader.cpp(83): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\levelloader.cpp(105): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\levelloader.cpp(106): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\levelloader.cpp(107): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\levelloader.cpp(114): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  Level3.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level3.cpp(53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level3.cpp(59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level3.cpp(63): warning C4244: 'argument': conversion from 'int' to 'float32', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level3.cpp(71): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level3.cpp(77): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Level2.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level2.cpp(54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level2.cpp(60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level2.cpp(66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level2.cpp(72): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level2.cpp(78): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  Compiling...
+  Level1.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level1.cpp(53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level1.cpp(59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level1.cpp(65): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level1.cpp(71): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\level1.cpp(77): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  JSONValue.cpp
+  JSON.cpp
+  InputManager.cpp
+  Basic2DObjects.cpp
+  GameObject.cpp
+  Game.cpp
+  EndScene.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\endscene.cpp(34): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Cannonball.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\cannonball.cpp(68): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Cannon.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\cannon.cpp(20): warning C4244: '=': conversion from 'float32' to 'int', possible loss of data
+  Button.cpp
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\button.cpp(7): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\button.cpp(9): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\button.cpp(10): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\button.cpp(11): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\button.cpp(12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\rwm_1718_p2_a\rwm_1718_p2_a\button.cpp(29): warning C4390: ';': empty controlled statement found; is this the intent?
+  BouncyPlatform.cpp
+  Generating Code...
+Box2D.lib(b2ChainShape.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2ChainShape.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2CircleShape.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2CircleShape.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2EdgeShape.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2EdgeShape.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2PolygonShape.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2PolygonShape.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2BroadPhase.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2BroadPhase.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2CollideCircle.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2CollideCircle.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2CollideEdge.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2CollideEdge.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2CollidePolygon.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2CollidePolygon.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Collision.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Collision.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Distance.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Distance.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2DynamicTree.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2DynamicTree.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2TimeOfImpact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2TimeOfImpact.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2BlockAllocator.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2BlockAllocator.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Draw.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Draw.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Math.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Math.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Settings.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Settings.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2StackAllocator.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2StackAllocator.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Timer.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Timer.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2ChainAndCircleContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2ChainAndCircleContact.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2ChainAndPolygonContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2ChainAndPolygonContact.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2CircleContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2CircleContact.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Contact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Contact.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2ContactSolver.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2ContactSolver.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2EdgeAndCircleContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2EdgeAndCircleContact.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2EdgeAndPolygonContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2EdgeAndPolygonContact.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2PolygonAndCircleContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2PolygonAndCircleContact.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2PolygonContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2PolygonContact.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2DistanceJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2DistanceJoint.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2FrictionJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2FrictionJoint.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2GearJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2GearJoint.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Joint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Joint.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2MotorJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2MotorJoint.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2MouseJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2MouseJoint.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2PrismaticJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2PrismaticJoint.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2PulleyJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2PulleyJoint.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2RevoluteJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2RevoluteJoint.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2RopeJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2RopeJoint.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2WeldJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2WeldJoint.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2WheelJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2WheelJoint.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Body.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Body.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2ContactManager.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2ContactManager.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Fixture.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Fixture.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Island.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Island.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2World.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2World.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2WorldCallbacks.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2WorldCallbacks.obj)' or at 'C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\Box2D.pdb'; linking object as if no debug info
+  RWM_1718_P2_A.vcxproj -> C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\RWM_1718_P2_A.exe
+  RWM_1718_P2_A.vcxproj -> C:\Users\jocon\Desktop\Games-Engineering\RWM_1718_P2_A\x64\Debug\RWM_1718_P2_A.pdb (Partial PDB)
