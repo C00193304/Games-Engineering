@@ -1,0 +1,9 @@
+﻿  coordinator.cpp
+coordinator.cpp(48): error C2664: 'BOOL CreateProcessA(LPCSTR,LPSTR,LPSECURITY_ATTRIBUTES,LPSECURITY_ATTRIBUTES,BOOL,DWORD,LPVOID,LPCSTR,LPSTARTUPINFOA,LPPROCESS_INFORMATION)': cannot convert argument 2 from 'std::vector<std::string,std::allocator<_Ty>>' to 'LPSTR'
+          with
+          [
+              _Ty=std::string
+          ]
+  coordinator.cpp(48): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+coordinator.cpp(62): error C2731: 'main': function cannot be overloaded
+  coordinator.cpp(61): note: see declaration of 'main'

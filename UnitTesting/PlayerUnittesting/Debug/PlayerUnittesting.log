@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\jocon\desktop\games-engineering\unittesting\playerunittesting\main.cpp(14): warning C4305: '=': truncation from '__int64' to 'int'
+c:\users\jocon\desktop\games-engineering\unittesting\playerunittesting\main.cpp(14): warning C4309: '=': truncation of constant value
+  PlayerUnittesting.vcxproj -> C:\Users\jocon\Desktop\Games-Engineering\UnitTesting\PlayerUnittesting\Debug\PlayerUnittesting.exe
+  PlayerUnittesting.vcxproj -> C:\Users\jocon\Desktop\Games-Engineering\UnitTesting\PlayerUnittesting\Debug\PlayerUnittesting.pdb (Partial PDB)
