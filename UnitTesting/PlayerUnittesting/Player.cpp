@@ -22,7 +22,7 @@ void Player::Update()
 		SpeedBoost();
 	}
 
-	assert(position <= 150);
+	assert(position <= 200);
 }
 
 void Player::VelocityInc()
@@ -41,7 +41,7 @@ void Player::SpeedBoost()
 	{
 		if (position <= 100)
 		{
-			if (velocity >= 1)
+			if (velocity >= 1.1)
 			{
 				velocity = 1;
 			}
