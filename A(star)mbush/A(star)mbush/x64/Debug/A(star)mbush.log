@@ -1,0 +1,4 @@
+﻿  NodeHolder.cpp
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\arcs.h(12): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\nodeholder.h(14): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  A(star)mbush.vcxproj -> C:\Users\jocon\Desktop\Games-Engineering\A(star)mbush\x64\Debug\A(star)mbush.exe
