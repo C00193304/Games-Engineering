@@ -3,14 +3,19 @@
 SDL_sem* lock;
 int wall;
 std::vector<Tiles*>* tiles;
+Player* player;
 
 Map::Map(EventListener *event)
 {
 	setUpMap();
 	m_grid.SetNodes(36);
 	m_grid.AddArcs();
+	m_player = Player{ SDL_Point{ 50,50 }, 20, 20, SDL_Color{ 255,0,0,255 }, event };
 
+	lock = SDL_CreateSemaphore(1);
+	wall = -1;
 	tiles = &m_tiles;
+	player = &m_player;
 }
 void Map::setUpMap()
 {
@@ -48,6 +53,7 @@ void Map::setUpMap()
 
 void Map::update(float dTime)
 {
+	m_player.update(dTime);
 }
 
 void Map::draw(SDL_Renderer * renderer)
@@ -56,4 +62,60 @@ void Map::draw(SDL_Renderer * renderer)
 	{
 		m_tiles.at(i)->draw(renderer);
 	}
+
+	m_player.draw(renderer);
+}
+
+int collisions(void*)
+{
+	int  wallI = -1;
+
+	while (true)
+	{
+		SDL_SemWait(lock);
+		wall++;
+		if (wall >= tiles->size())
+		{
+			wall = 0;
+		}
+		wallI = wall;
+		if (wallI >= tiles->size())
+		{
+			wallI = 0;
+		}
+
+		SDL_SemPost(lock);
+
+		SDL_Rect tempRect = { 0,0,0,0 };
+		if (SDL_IntersectRect(&player->GetRect(), &tiles->at(wallI)->GetRect(), &tempRect))
+		{
+			//top half collision code
+			if (tempRect.w > tempRect.h)
+			{
+				if (player->GetPosition().y > tiles->at(wallI)->GetPosition().y)
+				{
+					//set the player position back to the temp rect plus the x position stays the same
+					player->setPosition(SDL_Point{ player->GetPosition().x, player->GetRect().y + tempRect.h });
+				}
+				else
+				{
+					player->setPosition(SDL_Point{ player->GetPosition().x, player->GetRect().y - tempRect.h });
+				}
+				player->setSpeed(player->getSpeed().x, 0);
+			}
+			else
+			{
+				if (player->GetPosition().x > tiles->at(wallI)->GetPosition().x)
+				{
+					player->setPosition(SDL_Point{ player->GetRect().x + tempRect.w, player->GetPosition().y });
+				}
+				else
+				{
+					player->setPosition(SDL_Point{ player->GetRect().x - tempRect.w, player->GetPosition().y });
+				}
+				player->setSpeed(0, player->getSpeed().y);
+			}
+		}
+	}
+	return 0;
 }
