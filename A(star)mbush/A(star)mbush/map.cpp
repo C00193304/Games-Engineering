@@ -4,6 +4,8 @@ SDL_sem* lock;
 int wall;
 std::vector<Tiles*>* tiles;
 Player* player;
+BasicTypes* enemy;
+
 
 Map::Map(EventListener *event)
 {
@@ -16,6 +18,7 @@ Map::Map(EventListener *event)
 	wall = -1;
 	tiles = &m_tiles;
 	player = &m_player;
+	enemy = &m_enemy;
 }
 void Map::setUpMap()
 {
@@ -64,6 +67,18 @@ void Map::draw(SDL_Renderer * renderer)
 	}
 
 	m_player.draw(renderer);
+}
+
+void Map::spawnEnemies()
+{
+	for (int i = 0; i < rand() % 6, i++)
+	{
+		switch ((rand() % 3) + 1)
+		{
+		case 1:
+			m_enemies.push_back(enemyPool->bigEnemy(SDL_Point{}, 40, 40, SDL_Color{ rand() % 255, rand() % 255, rand() % 255, 255 }, m_grid, );
+		}
+	}
 }
 
 int collisions(void*)

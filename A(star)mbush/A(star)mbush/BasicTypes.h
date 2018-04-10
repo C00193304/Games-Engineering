@@ -11,6 +11,7 @@ public:
 	void draw(SDL_Renderer *renderer);
 	SDL_Point GetPosition() { return m_position; };
 	SDL_Rect GetRect() { return m_rect; };
+private:
 
 protected:
 	SDL_Point m_position;

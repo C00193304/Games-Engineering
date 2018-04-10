@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
 	Input input(eventListener);
 
 	Map map(eventListener);
-
+	
 	SDL_Thread* t1 = SDL_CreateThread(collisions, "Thread no.1", (void*)"Thread no.1");
 	SDL_Thread* t2 = SDL_CreateThread(collisions, "Thread no.2", (void*)"Thread no.2");
 

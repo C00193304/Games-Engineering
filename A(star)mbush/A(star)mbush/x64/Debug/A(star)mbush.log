@@ -1,5 +1,40 @@
-﻿  main.cpp
+﻿  Tiles.cpp
+  Player.cpp
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\player.cpp(16): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\player.cpp(17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\player.cpp(24): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\player.cpp(28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\player.cpp(32): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\player.cpp(36): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  NodeHolder.cpp
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\arcs.h(12): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\nodeholder.h(14): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Node.cpp
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\arcs.h(12): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+  map.cpp
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\arcs.h(12): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\nodeholder.h(14): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\map.cpp(104): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\map.cpp(116): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  main.cpp
 c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\arcs.h(12): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
 c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\nodeholder.h(14): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\main.cpp(28): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
-  A(star)mbush.vcxproj -> C:\Users\jocon\Desktop\Games-Engineering\A(star)mbush\x64\Debug\A(star)mbush.exe
+  Input.cpp
+  Enemy.cpp
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\arcs.h(12): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\nodeholder.h(14): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\enemy.cpp(5): error C2039: 'setSpeed': is not a member of 'Enemy'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\enemy.h(5): note: see declaration of 'Enemy'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\enemy.cpp(10): error C2039: 'update': is not a member of 'Enemy'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\enemy.h(5): note: see declaration of 'Enemy'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\enemy.cpp(16): error C2509: 'normalEnemy': member function not declared in 'Enemy'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\enemy.h(5): note: see declaration of 'Enemy'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\enemy.cpp(28): error C2509: 'bigEnemy': member function not declared in 'Enemy'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\enemy.h(5): note: see declaration of 'Enemy'
+  BasicTypes.cpp
+  Arcs.cpp
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\arcs.h(12): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\arcs.cpp(10): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  A-Star.cpp
+  Generating Code...
