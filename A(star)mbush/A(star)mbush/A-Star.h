@@ -7,14 +7,17 @@ class AStar
 {
 public:
 	AStar();
-	AStar(NodeHolder &nodes);
+	void update();
 
-	void calculatePath(Node* pStart, Node*pDest, std::vector<Node*>& path);
+	void calculatePath(Node*pDest, std::vector<Node*>& path);
 	NodeHolder getLayout() { return m_nodeHolder; };
+
+
 private:
-	NodeHolder m_nodeHolder;
+	Node* m_start;
+	Player* m_player;
+	int m_playerNode;
 	void ucs(Node* pStart, Node* pDest, std::vector<Node*>& path);
-
-
+	NodeHolder m_nodeHolder;
 };
 
