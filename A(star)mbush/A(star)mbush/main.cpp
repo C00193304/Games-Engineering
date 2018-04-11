@@ -5,7 +5,7 @@
 
 int main(int argc, char* argv[])
 {
-	SDL_Window* window = SDL_CreateWindow("A*mbush", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1920, 1080, SDL_WINDOW_SHOWN);
+	SDL_Window* window = SDL_CreateWindow("A*mbush", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1000, 1000, SDL_WINDOW_SHOWN);
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC);
 	SDL_Event *e = new SDL_Event();
 	EventListener *eventListener = new EventListener;

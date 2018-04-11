@@ -34,6 +34,9 @@ public:
 	void SetPrevious(Node *previousN);
 	Node* getPrevious() { return m_previousN; };
 
+	float GetHeuristic() { return m_heuristic; };
+	void setHeuristic(float heuristic);
+
 	void SetCost(float cost);
 	float GeCost() { return m_cost; };
 

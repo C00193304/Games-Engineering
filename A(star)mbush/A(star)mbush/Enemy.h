@@ -5,11 +5,12 @@
 class Enemy : public Spawner
 {
 public:
-	Enemy() {}
+	Enemy() {};
+
 	~Enemy() {};
-	BasicTypes* smallEnemy(SDL_Point position, int width, int height, SDL_Color colour, NodeHolder &grid, SDL_Point* playerPosition);
-	BasicTypes* bigEnemy(SDL_Point position, int width, int height, SDL_Color colour, NodeHolder &grid, SDL_Point* playerPosition);
-	BasicTypes* normalEnemy(SDL_Point position, int width, int height, SDL_Color colour, NodeHolder &grid, SDL_Point* playerPosition);
+	BasicTypes* smallEnemy(SDL_Point position, int width, int height, SDL_Color colour);
+	BasicTypes* bigEnemy(SDL_Point position, int width, int height, SDL_Color colour);
+	BasicTypes* normalEnemy(SDL_Point position, int width, int height, SDL_Color colour);
 
 private:
 	BasicTypes * enemyType;

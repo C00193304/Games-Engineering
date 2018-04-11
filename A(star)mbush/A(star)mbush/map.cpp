@@ -10,45 +10,52 @@ BasicTypes* enemy;
 Map::Map(EventListener *event)
 {
 	setUpMap();
-	m_grid.SetNodes(36);
+	m_grid.SetNodes(100);
 	m_grid.AddArcs();
+	enemyPool = new Enemy();
 	m_player = Player{ SDL_Point{ 50,50 }, 20, 20, SDL_Color{ 255,0,0,255 }, event };
+	spawnEnemies();
 
 	lock = SDL_CreateSemaphore(1);
 	wall = -1;
 	tiles = &m_tiles;
 	player = &m_player;
-	enemy = &m_enemy;
+	
 }
 void Map::setUpMap()
 {
-	for (int i = 0; i < 64; i++)
+	for (int i = 0; i < 100; i++)
 	{
-		for (int j = 0; j < 36; j++)
+		for (int j = 0; j < 100; j++)
 		{
 			if (i == 0)
 			{
-				m_tiles.push_back(new Tiles(SDL_Point{ i * (int)20.0f, j * (int)20.0f }, 20, 20, SDL_Color{ 255,255,255,255 }, "wall"));
-				m_grid.AddNode(SDL_Point{ i * (int)20.0f, j * (int)20.0f }, "wall");
+				m_tiles.push_back(new Tiles(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, 10, 10, SDL_Color{ 255,255,255,255 }, "wall"));
+				m_grid.AddNode(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, "wall");
 			}
 			else if (j == 0)
 			{
-				m_tiles.push_back(new Tiles(SDL_Point{ i * (int)20.0f, j * (int)20.0f }, 20, 20, SDL_Color{ 255,255,255,255 }, "wall"));
-				m_grid.AddNode(SDL_Point{ i * (int)20.0f, j * (int)20.0f }, "wall");
+				m_tiles.push_back(new Tiles(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, 10, 10, SDL_Color{ 255,255,255,255 }, "wall"));
+				m_grid.AddNode(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, "wall");
 			}
-			else if (i == 63)
+			else if (i == 99)
 			{
-				m_tiles.push_back(new Tiles(SDL_Point{ i * (int)20.0f, j * (int)20.0f }, 20, 20, SDL_Color{ 255,255,255,255 }, "wall"));
-				m_grid.AddNode(SDL_Point{ i * (int)20.0f, j * (int)20.0f }, "wall");
+				m_tiles.push_back(new Tiles(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, 10, 10, SDL_Color{ 255,255,255,255 }, "wall"));
+				m_grid.AddNode(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, "wall");
 			}
-			else if (j == 35)
+			else if (j == 99)
 			{
-				m_tiles.push_back(new Tiles(SDL_Point{ i * (int)20.0f, j * (int)20.0f }, 20, 20, SDL_Color{ 255,255,255,255 }, "wall"));
-				m_grid.AddNode(SDL_Point{ i * (int)20.0f, j * (int)20.0f }, "wall");
+				m_tiles.push_back(new Tiles(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, 10, 10, SDL_Color{ 255,255,255,255 }, "wall"));
+				m_grid.AddNode(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, "wall");
+			}
+			else if (i > 20 && i < 22 && j > 0 && j <= 90)
+			{
+				m_tiles.push_back(new Tiles(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, 10, 10, SDL_Color{ 255,255,255,255 }, "wall"));
+				m_grid.AddNode(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, "wall");
 			}
 			else
 			{
-				m_grid.AddNode(SDL_Point{ i * (int)20.0f, j * (int)20.0f }, "ground");
+				m_grid.AddNode(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, "ground");
 			}
 		}
 	}
@@ -67,16 +74,30 @@ void Map::draw(SDL_Renderer * renderer)
 	}
 
 	m_player.draw(renderer);
+	for (int i = 0; i < m_enemies.size(); i++)
+	{
+		m_enemies.at(i)->draw(renderer);
+	}
 }
 
 void Map::spawnEnemies()
 {
-	for (int i = 0; i < rand() % 6, i++)
+	srand(SDL_GetTicks());
+	for (int i = 0; i < 6; i++)
 	{
-		switch ((rand() % 3) + 1)
+		switch (rand() % 3 + 1)
 		{
 		case 1:
-			m_enemies.push_back(enemyPool->bigEnemy(SDL_Point{}, 40, 40, SDL_Color{ rand() % 255, rand() % 255, rand() % 255, 255 }, m_grid, );
+			m_enemies.push_back(enemyPool->smallEnemy({ rand() % 1920, rand() % 1080 }, 10, 10, { 255,0,0,255 }));
+			break;
+		case 2:
+			m_enemies.push_back(enemyPool->normalEnemy({ rand() % 1920, rand() % 1080 }, 20, 20, { 255,0,0,255 }));
+			break;
+		case 3:
+			m_enemies.push_back(enemyPool->bigEnemy({ rand() % 1920, rand() % 1080 }, 30, 30, { 255,0,0,255 }));
+			break;
+		default:
+			break;
 		}
 	}
 }

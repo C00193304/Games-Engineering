@@ -1,46 +1,24 @@
 #include "Enemy.h"
 
-BasicTypes * Enemy::smallEnemy(SDL_Point position, int width, int height, SDL_Color colour, NodeHolder & grid, SDL_Point * playerPosition)
+BasicTypes * Enemy::smallEnemy(SDL_Point position, int width, int height, SDL_Color colour)
 {
-	enemyType = new BasicTypes(position, width, height, colour);
-	m_position = position;
-
-	m_rect.x = position.x;
-	m_rect.y = position.y;
-	m_rect.w = width;
-	m_rect.h = height;
-
-	m_colour = colour;
+	enemyType = new BasicTypes(position, 10, 10, colour);
 
 	return enemyType;
 }
 
-BasicTypes * Enemy::bigEnemy(SDL_Point position, int width, int height, SDL_Color colour, NodeHolder & grid, SDL_Point * playerPosition)
+BasicTypes * Enemy::bigEnemy(SDL_Point position, int width, int height, SDL_Color colour)
 {
-	enemyType = new BasicTypes(position, width, height, colour);
-	m_position = position;
+	enemyType = new BasicTypes(position, 30, 30, colour);
 
-	m_rect.x = position.x;
-	m_rect.y = position.y;
-	m_rect.w = width;
-	m_rect.h = height;
-
-	m_colour = colour;
 
 	return enemyType;
 }
 
-BasicTypes * Enemy::normalEnemy(SDL_Point position, int width, int height, SDL_Color colour, NodeHolder & grid, SDL_Point * playerPosition)
+BasicTypes * Enemy::normalEnemy(SDL_Point position, int width, int height, SDL_Color colour)
 {
-	enemyType = new BasicTypes(position, width, height, colour);
-	m_position = position;
+	enemyType = new BasicTypes(position, 20, 20, colour);
 
-	m_rect.x = position.x;
-	m_rect.y = position.y;
-	m_rect.w = width;
-	m_rect.h = height;
-
-	m_colour = colour;
 
 	return enemyType;
 }
