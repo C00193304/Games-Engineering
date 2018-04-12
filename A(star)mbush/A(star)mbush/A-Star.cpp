@@ -7,18 +7,18 @@ AStar::AStar() {
 
 void AStar::update()
 {
-	if (m_changedNode == true) 
+	if (m_changedNode == true)
 	{
 		m_changedNode = false;
 	}
 	int indexClosestToPlayer = 0;
 	float closestDistPlayer = 99999;
 
-	for (int i = 0; i < m_nodeHolder->GetMaxNodes(); i++) 
+	for (int i = 0; i < m_nodeHolder->GetMaxNodes(); i++)
 	{
 		float distPlayer = magnitude(m_nodeHolder->getNodes().at(i)->GetPosition(), m_player->GetPosition());
 
-		if (distPlayer < closestDistPlayer) 
+		if (distPlayer < closestDistPlayer)
 		{
 			closestDistPlayer = distPlayer;
 			indexClosestToPlayer = i;
@@ -31,18 +31,18 @@ void AStar::update()
 	}
 }
 
-void AStar::calculatePath(Node *dest, std::vector<Node*>& path) 
+void AStar::calculatePath(Node *dest, std::vector<Node*>& path)
 {
-	if (m_start == NULL) 
+	if (m_start == NULL)
 	{
 		m_start = m_nodeHolder->getNodes().at(0);
 	}
 
-	if (m_start != NULL) 
+	if (m_start != NULL)
 	{
 		ucs(dest, m_start, path);
 
-		for (int i = 0; i < m_nodeHolder->GetMaxNodes() - 1; i++) 
+		for (int i = 0; i < m_nodeHolder->GetMaxNodes() - 1; i++)
 		{
 			m_nodeHolder->getNodes()[i]->setHeuristic(m_nodeHolder->getNodes()[i]->GeCost() * 0.9);
 			m_nodeHolder->getNodes()[i]->SetCost(99999);
@@ -64,30 +64,30 @@ void AStar::calculatePath(Node *dest, std::vector<Node*>& path)
 			{
 				float distC = priorityQueue.top()->GeCost() + (*iter).getWeight();
 
-				if (distC < (*iter).getNode()->GeCost()) 
+				if (distC < (*iter).getNode()->GeCost())
 				{
 					(*iter).getNode()->SetCost(distC);
 					(*iter).getNode()->SetPrevious(priorityQueue.top());
 				}
 
-				if ((*iter).getNode()->GetMarked() == false) 
+				if ((*iter).getNode()->GetMarked() == false)
 				{
 					priorityQueue.push((*iter).getNode());
 					(*iter).getNode()->SetMarked(true);
 				}
 
-				if ((*iter).getNode() == dest) 
+				if ((*iter).getNode() == dest)
 				{
 					Node* temp = dest;
 
-					if (distC <= (*iter).getNode()->GeCost()) 
+					if (distC <= (*iter).getNode()->GeCost())
 					{
 						if (path.empty() != true)
 						{
 							path.clear();
 						}
 
-						while (temp != m_start) 
+						while (temp != m_start)
 						{
 							path.push_back(temp);
 							temp = temp->getPrevious();
@@ -109,9 +109,9 @@ void AStar::calculatePath(Node *dest, std::vector<Node*>& path)
 
 void AStar::ucs(Node *start, Node *dest, std::vector<Node*>& path)
 {
-	if (start != NULL) 
+	if (start != NULL)
 	{
-		for (int i = 0; i < m_nodeHolder->GetMaxNodes() - 1; i++) 
+		for (int i = 0; i < m_nodeHolder->GetMaxNodes() - 1; i++)
 		{
 			m_nodeHolder->getNodes()[i]->SetCost(99999);
 		}
@@ -123,7 +123,7 @@ void AStar::ucs(Node *start, Node *dest, std::vector<Node*>& path)
 
 		priorityQueue.push(start);
 
-		while (priorityQueue.size() != 0 && priorityQueue.top() != dest) 
+		while (priorityQueue.size() != 0 && priorityQueue.top() != dest)
 		{
 			auto iter = priorityQueue.top()->GetArcs().begin();
 			auto endIter = priorityQueue.top()->GetArcs().end();
@@ -136,24 +136,24 @@ void AStar::ucs(Node *start, Node *dest, std::vector<Node*>& path)
 					(*iter).getNode()->SetPrevious(priorityQueue.top());
 				}
 
-				if ((*iter).getNode()->GetMarked() == false) 
+				if ((*iter).getNode()->GetMarked() == false)
 				{
 					priorityQueue.push((*iter).getNode());
 					(*iter).getNode()->SetMarked(true);
 				}
 
-				if ((*iter).getNode() == dest) 
+				if ((*iter).getNode() == dest)
 				{
 					Node* temp = dest;
 
-					if (distC <= (*iter).getNode()->GeCost()) 
+					if (distC <= (*iter).getNode()->GeCost())
 					{
-						if (path.empty() != true) 
+						if (path.empty() != true)
 						{
 							path.clear();
 						}
 
-						while (temp != start) 
+						while (temp != start)
 						{
 							path.push_back(temp);
 							temp = temp->getPrevious();
@@ -166,7 +166,7 @@ void AStar::ucs(Node *start, Node *dest, std::vector<Node*>& path)
 		}
 	}
 
-	for (int i = 0; i < m_nodeHolder->GetMaxNodes() - 1; i++) 
+	for (int i = 0; i < m_nodeHolder->GetMaxNodes() - 1; i++)
 	{
 		m_nodeHolder->getNodes()[i]->SetMarked(false);
 	}
@@ -177,12 +177,12 @@ float AStar::magnitude(SDL_Point p1, SDL_Point p2)
 	return 0.0f;
 }
 
-NodeHolder* AStar::getLayout() 
+NodeHolder* AStar::getLayout()
 {
 	return m_nodeHolder;
 }
 
-void AStar::addPlayer(Player *player) 
+void AStar::addPlayer(Player *player)
 {
 	m_player = player;
 }
@@ -192,19 +192,19 @@ bool AStar::getChangedNode()
 	return m_changedNode;
 }
 
-class NodeSearchCostComparerAStar 
+class NodeSearchCostComparerAStar
 {
 public:
-	bool operator()(Node* n1, Node* n2) 
+	bool operator()(Node* n1, Node* n2)
 	{
 		return n1->GeCost() + n1->GetHeuristic() > n2->GeCost() + n2->GetHeuristic();
 	}
 };
 
-class NodeSearchCostComparerUCS 
+class NodeSearchCostComparerUCS
 {
 public:
-	bool operator()(Node* n1, Node* n2) 
+	bool operator()(Node* n1, Node* n2)
 	{
 		return n1->GeCost() > n2->GeCost();
 	}
