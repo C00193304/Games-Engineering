@@ -13,7 +13,16 @@ Map::Map(EventListener *event)
 	m_grid.SetNodes(100);
 	m_grid.AddArcs();
 	enemyPool = new Enemy();
-	m_player = Player{ SDL_Point{ 50,50 }, 20, 20, SDL_Color{ 255,0,0,255 }, event };
+	srand(SDL_GetTicks());
+	int playerx = 10 + rand() % ((40 + 1) - 10);
+	int playery = 34 + rand() % ((67 + 1) - 34);
+	while (playerx == 21 || playerx == 20)
+	{
+		playerx = 10 + rand() % ((40 + 1) - 10);
+	}
+	playerx *= 10;
+	playery *= 10;
+	m_player = Player{ SDL_Point{ playerx,playery }, 20, 20, SDL_Color{ 255,0,0,255 }, event };
 	spawnEnemies();
 
 	lock = SDL_CreateSemaphore(1);
@@ -53,6 +62,16 @@ void Map::setUpMap()
 				m_tiles.push_back(new Tiles(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, 10, 10, SDL_Color{ 255,255,255,255 }, "wall"));
 				m_grid.AddNode(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, "wall");
 			}
+			else if (i > 50 && i < 52 && j > 10 && j <= 90)
+			{
+				m_tiles.push_back(new Tiles(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, 10, 10, SDL_Color{ 255,255,255,255 }, "wall"));
+				m_grid.AddNode(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, "wall");
+			}
+			else if (i > 75 && i < 77 && j > 5 && j <= 85)
+			{
+				m_tiles.push_back(new Tiles(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, 10, 10, SDL_Color{ 255,255,255,255 }, "wall"));
+				m_grid.AddNode(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, "wall");
+			}
 			else
 			{
 				m_grid.AddNode(SDL_Point{ i * (int)10.0f, j * (int)10.0f }, "ground");
@@ -83,18 +102,41 @@ void Map::draw(SDL_Renderer * renderer)
 void Map::spawnEnemies()
 {
 	srand(SDL_GetTicks());
-	for (int i = 0; i < 6; i++)
+	for (int i = 0; i < 50; i++)
 	{
+		int x = 62 + rand() % ((95 + 1) - 62);
+		int y = 10 + rand() % ((43 + 1) - 10);
+
+		while (x == 76)
+		{
+			x = 62 + rand() % ((95 + 1) - 62);
+		}
 		switch (rand() % 3 + 1)
 		{
 		case 1:
-			m_enemies.push_back(enemyPool->smallEnemy({ rand() % 1920, rand() % 1080 }, 10, 10, { 255,0,0,255 }));
+			x *= 10;
+			y *= 10;
+			m_enemies.push_back(enemyPool->smallEnemy({ x,y }, 10, 10, { 0,200,0,255 }));
 			break;
 		case 2:
-			m_enemies.push_back(enemyPool->normalEnemy({ rand() % 1920, rand() % 1080 }, 20, 20, { 255,0,0,255 }));
+			while (x == 75 || x == 76)
+			{
+				x = 62 + rand() % ((95 + 1) - 62);
+			}
+
+			x *= 10;
+			y *= 10;
+			m_enemies.push_back(enemyPool->normalEnemy({ x,y }, 20, 20, { 0,255,0,255 }));
 			break;
 		case 3:
-			m_enemies.push_back(enemyPool->bigEnemy({ rand() % 1920, rand() % 1080 }, 30, 30, { 255,0,0,255 }));
+			while (x == 75 || x == 76 || x == 74)
+			{
+				x = 62 + rand() % ((95 + 1) - 62);
+			}
+
+			x *= 10;
+			y *= 10;
+			m_enemies.push_back(enemyPool->bigEnemy({ x,y }, 30, 30, { 0,0,255,255 }));
 			break;
 		default:
 			break;
