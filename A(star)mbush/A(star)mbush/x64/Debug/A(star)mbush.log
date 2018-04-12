@@ -1,1 +1,140 @@
-﻿
+﻿  A-Star.cpp
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\arcs.h(12): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\nodeholder.h(14): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(47): error C2065: 'NodeSearchCostComparerAStar': undeclared identifier
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(47): error C2923: 'std::priority_queue': 'NodeSearchCostComparerAStar' is not a valid template type argument for parameter '_Pr'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(47): error C2133: 'priorityQ': unknown size
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(47): error C2512: 'std::priority_queue': no appropriate default constructor available
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\queue(214): note: see declaration of 'std::priority_queue'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(52): error C2663: 'std::priority_queue<_Ty,_Container,_Pr>::push': 2 overloads have no legal conversion for 'this' pointer
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(54): error C2662: '_Container::size_type std::priority_queue<_Ty,_Container,_Pr>::size(void) const': cannot convert 'this' pointer from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(54): note: Reason: cannot convert from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(54): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(54): error C2662: '_Container::const_reference std::priority_queue<_Ty,_Container,_Pr>::top(void) const': cannot convert 'this' pointer from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(54): note: Reason: cannot convert from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(54): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(56): error C2662: '_Container::const_reference std::priority_queue<_Ty,_Container,_Pr>::top(void) const': cannot convert 'this' pointer from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(56): note: Reason: cannot convert from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(56): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(56): error C2227: left of '->GetArcs' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(56): error C2228: left of '.begin' must have class/struct/union
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(57): error C2662: '_Container::const_reference std::priority_queue<_Ty,_Container,_Pr>::top(void) const': cannot convert 'this' pointer from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(57): note: Reason: cannot convert from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(57): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(57): error C2227: left of '->GetArcs' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(57): error C2228: left of '.end' must have class/struct/union
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(59): error C3536: 'iter': cannot be used before it is initialized
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(59): error C3536: 'endIter': cannot be used before it is initialized
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(61): error C2662: '_Container::const_reference std::priority_queue<_Ty,_Container,_Pr>::top(void) const': cannot convert 'this' pointer from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(61): note: Reason: cannot convert from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(61): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(61): error C2227: left of '->GeCost' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(61): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(61): error C2228: left of '.getWeight' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(61): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(63): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(63): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(63): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(63): error C2227: left of '->GeCost' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(65): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(65): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(65): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(65): error C2227: left of '->SetCost' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(66): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(66): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(66): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(66): error C2227: left of '->SetPrevious' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(66): error C2662: '_Container::const_reference std::priority_queue<_Ty,_Container,_Pr>::top(void) const': cannot convert 'this' pointer from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(66): note: Reason: cannot convert from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(66): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(69): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(69): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(69): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(69): error C2227: left of '->GetMarked' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(71): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(71): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(71): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(71): error C2663: 'std::priority_queue<_Ty,_Container,_Pr>::push': 2 overloads have no legal conversion for 'this' pointer
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(72): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(72): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(72): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(72): error C2227: left of '->SetMarked' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(75): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(75): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(75): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(79): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(79): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(79): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(79): error C2227: left of '->GeCost' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(96): error C2662: 'void std::priority_queue<_Ty,_Container,_Pr>::pop(void)': cannot convert 'this' pointer from 'std::priority_queue' to 'std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(96): note: Reason: cannot convert from 'std::priority_queue' to 'std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(96): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(115): error C2065: 'NodeSearchCostComparerUCS': undeclared identifier
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(115): error C2923: 'std::priority_queue': 'NodeSearchCostComparerUCS' is not a valid template type argument for parameter '_Pr'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(115): error C2133: 'priorityQueue': unknown size
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(115): error C2512: 'std::priority_queue': no appropriate default constructor available
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.12.25827\include\queue(214): note: see declaration of 'std::priority_queue'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(120): error C2663: 'std::priority_queue<_Ty,_Container,_Pr>::push': 2 overloads have no legal conversion for 'this' pointer
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(122): error C2662: '_Container::size_type std::priority_queue<_Ty,_Container,_Pr>::size(void) const': cannot convert 'this' pointer from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(122): note: Reason: cannot convert from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(122): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(122): error C2662: '_Container::const_reference std::priority_queue<_Ty,_Container,_Pr>::top(void) const': cannot convert 'this' pointer from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(122): note: Reason: cannot convert from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(122): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(124): error C2662: '_Container::const_reference std::priority_queue<_Ty,_Container,_Pr>::top(void) const': cannot convert 'this' pointer from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(124): note: Reason: cannot convert from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(124): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(124): error C2227: left of '->GetArcs' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(124): error C2228: left of '.begin' must have class/struct/union
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(125): error C2662: '_Container::const_reference std::priority_queue<_Ty,_Container,_Pr>::top(void) const': cannot convert 'this' pointer from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(125): note: Reason: cannot convert from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(125): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(125): error C2227: left of '->GetArcs' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(125): error C2228: left of '.end' must have class/struct/union
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(127): error C3536: 'iter': cannot be used before it is initialized
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(127): error C3536: 'endIter': cannot be used before it is initialized
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(128): error C2662: '_Container::const_reference std::priority_queue<_Ty,_Container,_Pr>::top(void) const': cannot convert 'this' pointer from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(128): note: Reason: cannot convert from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(128): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(128): error C2227: left of '->GeCost' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(128): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(128): error C2228: left of '.getWeight' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(128): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(130): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(130): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(130): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(130): error C2227: left of '->GeCost' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(131): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(131): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(131): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(131): error C2227: left of '->SetCost' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(132): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(132): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(132): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(132): error C2227: left of '->SetPrevious' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(132): error C2662: '_Container::const_reference std::priority_queue<_Ty,_Container,_Pr>::top(void) const': cannot convert 'this' pointer from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(132): note: Reason: cannot convert from 'std::priority_queue' to 'const std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(132): note: Conversion requires a second user-defined-conversion operator or constructor
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(135): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(135): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(135): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(135): error C2227: left of '->GetMarked' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(137): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(137): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(137): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(137): error C2663: 'std::priority_queue<_Ty,_Container,_Pr>::push': 2 overloads have no legal conversion for 'this' pointer
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(138): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(138): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(138): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(138): error C2227: left of '->SetMarked' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(141): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(141): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(141): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(145): error C2100: illegal indirection
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(145): error C2228: left of '.getNode' must have class/struct/union
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(145): note: type is 'int'
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(145): error C2227: left of '->GeCost' must point to class/struct/union/generic type
+c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(161): error C2662: 'void std::priority_queue<_Ty,_Container,_Pr>::pop(void)': cannot convert 'this' pointer from 'std::priority_queue' to 'std::priority_queue<_Ty,_Container,_Pr> &'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(161): note: Reason: cannot convert from 'std::priority_queue' to 'std::priority_queue<_Ty,_Container,_Pr>'
+  c:\users\jocon\desktop\games-engineering\a(star)mbush\a(star)mbush\a-star.cpp(161): note: Conversion requires a second user-defined-conversion operator or constructor

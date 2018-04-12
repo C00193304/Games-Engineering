@@ -9,9 +9,9 @@ public:
 	AStar();
 	void update();
 	void calculatePath(Node* pDest, std::vector<Node*>& path);
-	NodeHolder* getLayout();
+	NodeHolder* getNodeHolder() { return m_nodeHolder; };
 	void addPlayer(Player* player);
-	bool getChangedNode();
+	bool getChangedNode() { return m_changedNode; };
 
 private:
 	NodeHolder * m_nodeHolder;

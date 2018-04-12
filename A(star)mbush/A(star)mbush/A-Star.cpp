@@ -36,10 +36,6 @@ void AStar::calculatePath(Node *dest, std::vector<Node*>& path)
 	if (m_start == NULL)
 	{
 		m_start = m_nodeHolder->getNodes().at(0);
-	}
-
-	if (m_start != NULL)
-	{
 		ucs(dest, m_start, path);
 
 		for (int i = 0; i < m_nodeHolder->GetMaxNodes() - 1; i++)
@@ -48,31 +44,31 @@ void AStar::calculatePath(Node *dest, std::vector<Node*>& path)
 			m_nodeHolder->getNodes()[i]->SetCost(99999);
 		}
 
-		std::priority_queue<Node*, std::vector<Node*>, NodeSearchCostComparerAStar> priorityQueue;
+		std::priority_queue<Node*, std::vector<Node*>, NodeSearchCostComparerAStar> priorityQ;
 
 		m_start->SetCost(0);
 		m_start->SetMarked(true);
 
-		priorityQueue.push(m_start);
+		priorityQ.push(m_start);
 
-		while (priorityQueue.size() != 0 && priorityQueue.top() != dest)
+		while (priorityQ.size() != 0 && priorityQ.top() != dest)
 		{
-			auto iter = priorityQueue.top()->GetArcs().begin();
-			auto endIter = priorityQueue.top()->GetArcs().end();
+			auto iter = priorityQ.top()->GetArcs().begin();
+			auto endIter = priorityQ.top()->GetArcs().end();
 
 			for (; iter != endIter; iter++)
 			{
-				float distC = priorityQueue.top()->GeCost() + (*iter).getWeight();
+				float distC = priorityQ.top()->GeCost() + (*iter).getWeight();
 
 				if (distC < (*iter).getNode()->GeCost())
 				{
 					(*iter).getNode()->SetCost(distC);
-					(*iter).getNode()->SetPrevious(priorityQueue.top());
+					(*iter).getNode()->SetPrevious(priorityQ.top());
 				}
 
 				if ((*iter).getNode()->GetMarked() == false)
 				{
-					priorityQueue.push((*iter).getNode());
+					priorityQ.push((*iter).getNode());
 					(*iter).getNode()->SetMarked(true);
 				}
 
@@ -97,7 +93,7 @@ void AStar::calculatePath(Node *dest, std::vector<Node*>& path)
 				}
 			}
 
-			priorityQueue.pop(); // occasionally throws exception in debug
+			priorityQ.pop();
 		}
 	}
 
@@ -170,26 +166,6 @@ void AStar::ucs(Node *start, Node *dest, std::vector<Node*>& path)
 	{
 		m_nodeHolder->getNodes()[i]->SetMarked(false);
 	}
-}
-
-float AStar::magnitude(SDL_Point p1, SDL_Point p2)
-{
-	return 0.0f;
-}
-
-NodeHolder* AStar::getLayout()
-{
-	return m_nodeHolder;
-}
-
-void AStar::addPlayer(Player *player)
-{
-	m_player = player;
-}
-
-bool AStar::getChangedNode()
-{
-	return m_changedNode;
 }
 
 class NodeSearchCostComparerAStar
