@@ -1,20 +1,26 @@
 #pragma once
-#include "Node.h"
+
 #include "NodeHolder.h"
+#include "Player.h"
 #include <queue>
 
-class AStar
-{
+class AStar {
 public:
 	AStar();
-	AStar(NodeHolder &nodes);
+	void update();
+	void calculatePath(Node* pDest, std::vector<Node*>& path);
+	NodeHolder* getLayout();
+	void addPlayer(Player* player);
+	bool getChangedNode();
 
-	void calculatePath(Node* pStart, Node*pDest, std::vector<Node*>& path);
-	NodeHolder getLayout() { return m_nodeHolder; };
 private:
-	NodeHolder m_nodeHolder;
+	NodeHolder * m_nodeHolder;
+	Player* m_player;
+	Node* m_start;
+	int m_nodeNearPlayer;
+	bool m_changedNode;
+
 	void ucs(Node* pStart, Node* pDest, std::vector<Node*>& path);
 
-
+	float magnitude(SDL_Point p1, SDL_Point p2);
 };
-

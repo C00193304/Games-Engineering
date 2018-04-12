@@ -1,165 +1,211 @@
 #include "A-Star.h"
 
-void AStar::ucs(Node * pStart, Node * pDest, std::vector<Node*>& path)
+AStar::AStar() {
+	m_nodeHolder = new NodeHolder;
+	m_changedNode = false;
+}
+
+void AStar::update()
 {
-	if (pStart != NULL)
+	if (m_changedNode == true) 
 	{
-		for (int i = 0; i < m_nodeHolder.GetMaxNodes() - 1; i++)
+		m_changedNode = false;
+	}
+	int indexClosestToPlayer = 0;
+	float closestDistPlayer = 99999;
+
+	for (int i = 0; i < m_nodeHolder->GetMaxNodes(); i++) 
+	{
+		float distPlayer = magnitude(m_nodeHolder->getNodes().at(i)->GetPosition(), m_player->GetPosition());
+
+		if (distPlayer < closestDistPlayer) 
 		{
-			m_nodeHolder.getNodes()[i]->SetCost(999999999999);
+			closestDistPlayer = distPlayer;
+			indexClosestToPlayer = i;
+		}
+	}
+
+	if (m_nodeHolder->getNodes().at(m_nodeNearPlayer) != m_start) {
+		m_start = m_nodeHolder->getNodes().at(m_nodeNearPlayer);
+		m_changedNode = true;
+	}
+}
+
+void AStar::calculatePath(Node *dest, std::vector<Node*>& path) 
+{
+	if (m_start == NULL) 
+	{
+		m_start = m_nodeHolder->getNodes().at(0);
+	}
+
+	if (m_start != NULL) 
+	{
+		ucs(dest, m_start, path);
+
+		for (int i = 0; i < m_nodeHolder->GetMaxNodes() - 1; i++) 
+		{
+			m_nodeHolder->getNodes()[i]->setHeuristic(m_nodeHolder->getNodes()[i]->GeCost() * 0.9);
+			m_nodeHolder->getNodes()[i]->SetCost(99999);
 		}
 
-		//priority queue checks heuristic cost to the total cost
-		std::priority_queue<Node*, std::vector<Node*>, NodeSearchCostComparerUCS> priorityQ;
-		pStart->SetCost(0.0f);
-		//set the starting node to marked and push it to the Q
-		priorityQ.push(pStart);
-		pStart->SetMarked(true);
-		while (priorityQ.size() != 0 && priorityQ.top() != pDest)
+		std::priority_queue<Node*, std::vector<Node*>, NodeSearchCostComparerAStar> priorityQueue;
+
+		m_start->SetCost(0);
+		m_start->SetMarked(true);
+
+		priorityQueue.push(m_start);
+
+		while (priorityQueue.size() != 0 && priorityQueue.top() != dest)
 		{
-			auto iter = priorityQ.top()->GetArcs().begin();
-			auto endIter = priorityQ.top()->GetArcs().end();
+			auto iter = priorityQueue.top()->GetArcs().begin();
+			auto endIter = priorityQueue.top()->GetArcs().end();
 
 			for (; iter != endIter; iter++)
 			{
-				float distC = priorityQ.top()->GeCost() + (*iter).getWeight();
-				//add the weight of the top of the Q to the weight of the arc it is connecting to
-				//and if its less than the nodes weight that it is connecting to
-				if (distC < (*iter).getNode()->GeCost())
+				float distC = priorityQueue.top()->GeCost() + (*iter).getWeight();
+
+				if (distC < (*iter).getNode()->GeCost()) 
 				{
-					//set the node to the previous node
 					(*iter).getNode()->SetCost(distC);
-					(*iter).getNode()->SetPrevious(priorityQ.top());
+					(*iter).getNode()->SetPrevious(priorityQueue.top());
 				}
-				if ((*iter).getNode()->GetMarked() == false)
+
+				if ((*iter).getNode()->GetMarked() == false) 
 				{
-					//marks the node and add it to the queue 
-					priorityQ.push((*iter).getNode());
-					((*iter).getNode()->SetMarked(true));
+					priorityQueue.push((*iter).getNode());
+					(*iter).getNode()->SetMarked(true);
 				}
-				if ((*iter).getNode() == pDest)
+
+				if ((*iter).getNode() == dest) 
 				{
-					Node* tempDest = pDest;
-					if (distC <= (*iter).getNode()->GeCost())
+					Node* temp = dest;
+
+					if (distC <= (*iter).getNode()->GeCost()) 
 					{
 						if (path.empty() != true)
 						{
 							path.clear();
 						}
-						while (tempDest != pStart)
-						{
-							path.push_back(tempDest);
-							tempDest = tempDest->getPrevious();
-							//moves back to the previous node until it reaches the initial node.
 
+						while (temp != m_start) 
+						{
+							path.push_back(temp);
+							temp = temp->getPrevious();
 						}
-						path.push_back(pStart);
+						path.push_back(m_start);
 					}
 				}
 			}
-			priorityQ.pop();
+
+			priorityQueue.pop(); // occasionally throws exception in debug
 		}
 	}
-	//reset
-	for (int i = 0; i < m_nodeHolder.GetMaxNodes() - 1; i++)
+
+	for (int i = 0; i < m_nodeHolder->GetMaxNodes() - 1; i++)
 	{
-		m_nodeHolder.getNodes()[i]->SetMarked(false);
+		m_nodeHolder->getNodes()[i]->SetMarked(false);
 	}
 }
 
-AStar::AStar()
+void AStar::ucs(Node *start, Node *dest, std::vector<Node*>& path)
 {
-}
-
-AStar::AStar(NodeHolder & nodes)
-{
-}
-
-void AStar::calculatePath(Node * pStart, Node * pDest, std::vector<Node*>& path)
-{
-	if (pStart != NULL)
+	if (start != NULL) 
 	{
-		ucs(pStart, pDest, path);
-
-		for (int i = 0; i < m_nodeHolder.GetMaxNodes() - 1; i++)
+		for (int i = 0; i < m_nodeHolder->GetMaxNodes() - 1; i++) 
 		{
-			//using the cost it calculates the heuristic
-			m_nodeHolder.getNodes()[i]->setHeuristic(m_nodeHolder.getNodes()[i]->GeCost() * 0.9);
-
-			m_nodeHolder.getNodes()[i]->SetCost(999999999);
+			m_nodeHolder->getNodes()[i]->SetCost(99999);
 		}
 
-		std::priority_queue<Node*, std::vector<Node*>, NodeSearchCostComparerAStar> priorityQ;
+		std::priority_queue<Node*, std::vector<Node*>, NodeSearchCostComparerUCS> priorityQueue;
 
-		pStart->SetCost(0);
+		start->SetCost(0);
+		start->SetMarked(true);
 
-		//push the starting node to the queue and set it as marked
-		priorityQ.push(pStart);
-		pStart->SetMarked(true);
-		//if there are nodes in the queue and the destination is not the top 
+		priorityQueue.push(start);
 
-		while (priorityQ.size() != 0 && priorityQ.top() != pDest)
+		while (priorityQueue.size() != 0 && priorityQueue.top() != dest) 
 		{
-			//add all child nodes to the top of the queue
-			//iterate through the list of arcs
-			auto iter = priorityQ.top()->GetArcs().begin();
-			auto endIter = priorityQ.top()->GetArcs().end();
+			auto iter = priorityQueue.top()->GetArcs().begin();
+			auto endIter = priorityQueue.top()->GetArcs().end();
 
 			for (; iter != endIter; iter++) {
-				//adds weight to the arc 
-				float distC = priorityQ.top()->GeCost() + (*iter).getWeight();
+				float distC = priorityQueue.top()->GeCost() + (*iter).getWeight();
 
 				if (distC < (*iter).getNode()->GeCost()) {
 					(*iter).getNode()->SetCost(distC);
-					//sets current node to the previous node.
-					(*iter).getNode()->SetPrevious(priorityQ.top());
+					(*iter).getNode()->SetPrevious(priorityQueue.top());
 				}
 
-				if ((*iter).getNode()->GetMarked() == false) {
-					//add node to the queue and mark it
-					priorityQ.push((*iter).getNode());
+				if ((*iter).getNode()->GetMarked() == false) 
+				{
+					priorityQueue.push((*iter).getNode());
 					(*iter).getNode()->SetMarked(true);
 				}
 
-				if ((*iter).getNode() == pDest) {
-					Node* temp = pDest;
+				if ((*iter).getNode() == dest) 
+				{
+					Node* temp = dest;
 
-					if (distC <= (*iter).getNode()->GeCost()) {
-						if (path.empty() != true) {
+					if (distC <= (*iter).getNode()->GeCost()) 
+					{
+						if (path.empty() != true) 
+						{
 							path.clear();
 						}
-						//returns to the previous node
-						while (temp != pStart) {
+
+						while (temp != start) 
+						{
 							path.push_back(temp);
-							temp = temp->getPrevious(); 
+							temp = temp->getPrevious();
 						}
-						path.push_back(pStart);
+						path.push_back(start);
 					}
 				}
 			}
-
-			priorityQ.pop();
+			priorityQueue.pop();
 		}
 	}
 
-//resets nodes
-	for (int i = 0; i < m_nodeHolder.GetMaxNodes() - 1; i++)
+	for (int i = 0; i < m_nodeHolder->GetMaxNodes() - 1; i++) 
 	{
-		m_nodeHolder.getNodes()[i]->SetMarked(false);
+		m_nodeHolder->getNodes()[i]->SetMarked(false);
 	}
 }
 
+float AStar::magnitude(SDL_Point p1, SDL_Point p2)
+{
+	return 0.0f;
+}
 
-class NodeSearchCostComparerAStar {
+NodeHolder* AStar::getLayout() 
+{
+	return m_nodeHolder;
+}
+
+void AStar::addPlayer(Player *player) 
+{
+	m_player = player;
+}
+
+bool AStar::getChangedNode()
+{
+	return m_changedNode;
+}
+
+class NodeSearchCostComparerAStar 
+{
 public:
-	bool operator()(Node* n1, Node* n2) {
+	bool operator()(Node* n1, Node* n2) 
+	{
 		return n1->GeCost() + n1->GetHeuristic() > n2->GeCost() + n2->GetHeuristic();
 	}
 };
 
-class NodeSearchCostComparerUCS {
+class NodeSearchCostComparerUCS 
+{
 public:
-	bool operator()(Node* n1, Node* n2) {
+	bool operator()(Node* n1, Node* n2) 
+	{
 		return n1->GeCost() > n2->GeCost();
 	}
 };
